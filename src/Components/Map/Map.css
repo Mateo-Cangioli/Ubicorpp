@@ -1,0 +1,24 @@
+.map-container {
+    height: 500px;
+    width: 100%;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+  }
+  
+.search-bar {
+    margin-bottom: 10px;
+    z-index: 1000; /* Asegurarse de que el buscador esté visible sobre el mapa */
+}
+ 
+/* Estilo para el botón */
+button {
+  margin-bottom: 20px;
+}
+
+/* Personalización del menú */
+#menu-collapse {
+  max-width: 300px;
+  margin-top: 10px;
+}
+
+

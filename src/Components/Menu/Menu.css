@@ -1,0 +1,88 @@
+/* Estilos para el botón hamburguesa */
+.menu-button {
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    z-index: 1100; /* Aseguramos que el botón siempre esté encima */
+    background: #007bff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    color: #ffffff;
+    background-color: #007bff;
+    cursor: pointer;
+  }
+  
+  /* Estilos para el sidebar del menú */
+  .menu-sidebar {
+    position: fixed;
+    top: 0px;
+    left: -350px; /* El menú comienza fuera de la pantalla */
+    width: 350px;
+    height: 100%;
+    background-color: #007bff;
+    border-right: 2px solid #ddd;
+    padding: 10px;
+    z-index: 1000; /* Menú tiene un z-index menor que el botón */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Transición suave */
+  }
+  
+  /* Menú visible cuando está abierto */
+  .menu-sidebar.open {
+    left: 0; /* El menú se mueve a la posición 0, es decir, visible */
+  }
+  
+  /* Estilo para el contenido del menú */
+  .menu-content {
+    padding: 10px;
+    margin-top: 50PX;
+   
+  }
+  
+  .menu-content h5 {
+    margin-bottom: 15px;
+    top: 30px;
+  }
+  
+  .menu-content ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .menu-content li {
+    margin: 10px 0;
+  }
+  
+  .menu-content a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+.menu-content a:hover {
+    text-decoration: underline;
+}
+ 
+@media (max-width: 768px) {
+    .menu-button {
+        top: 10px; /* Mueve el botón un poco más arriba en pantallas pequeñas */
+        left: 10px; /* Mueve el botón hacia la izquierda para dar más espacio */
+    }
+}
+
+/* Media query para pantallas muy pequeñas (como smartphones en apaisado o dispositivos con pantallas pequeñas) */
+@media (max-width: 480px) {
+    .menu-button {
+        top: 5px; /* Ajusta el botón para que esté más cerca de la parte superior */
+        left: 5px; /* Ajusta la distancia hacia la izquierda */
+        padding: 8px; /* Ajusta el tamaño del botón para que sea más pequeño */
+    }
+}
+
+/* Media query para pantallas grandes (tablets, laptops, etc.) */
+@media (min-width: 1024px) {
+    .menu-button {
+        top: 20px; /* En pantallas grandes, el botón se mantiene en su posición original */
+        left: 40px; /* Ajusta el botón a la posición que quieras en pantallas grandes */
+    }
+}

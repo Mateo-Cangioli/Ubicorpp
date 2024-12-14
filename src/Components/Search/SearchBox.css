@@ -1,0 +1,125 @@
+/* Estilos del contenedor principal */
+.search-bar-container {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  /* Estilos del formulario */
+  .search-bar-container form {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Estilos del input */
+  .search-bar-container input {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: calc(100% - 120px); /* Ajusta el tamaño del input para que no se solape con los botones */
+    margin-right: 10px;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos del botón de buscar */
+  .search-bar-container .search-btn {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #007bff; /* Color azul para el botón de Buscar */
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover para el botón de buscar */
+  .search-bar-container .search-btn:hover {
+    background-color: #0056b3; /* Cambio de color al pasar el cursor */
+  }
+  
+  /* Estilos para el botón de reiniciar */
+  .search-bar-container .reset-btn {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #dc3545; /* Color rojo para el botón de Reiniciar */
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover para el botón de reiniciar */
+  .search-bar-container .reset-btn:hover {
+    background-color: #c82333; /* Cambio de color al pasar el cursor */
+  }
+  
+  /* Estilos de la lista de resultados */
+  .search-bar-container ul {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 600px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    z-index: 1000;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  /* Estilos de cada item en la lista de resultados */
+  .search-bar-container li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Hover en los items de la lista */
+  .search-bar-container li:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Media Queries para hacerlo responsive */
+  
+  /* Pantallas pequeñas (smartphones en vertical) */
+  @media (max-width: 768px) {
+    .search-bar-container {
+      top: 10px; /* Ajusta la distancia desde la parte superior en pantallas pequeñas */
+    }
+  
+    .search-bar-container input {
+      width: calc(100% - 80px); /* Ajusta el tamaño del input para pantallas pequeñas */
+    }
+  
+    .search-bar-container button {
+      padding: 8px;
+    }
+  }
+  
+  /* Pantallas muy pequeñas (smartphones en apaisado o dispositivos con pantallas pequeñas) */
+  @media (max-width: 480px) {
+    .search-bar-container {
+      top: 5px; /* Ajusta aún más la distancia desde la parte superior */
+    }
+  
+    .search-bar-container input {
+      width: calc(100% - 70px); /* Ajusta el tamaño del input */
+    }
+  
+    .search-bar-container button {
+      padding: 6px;
+    }
+  }
+  
